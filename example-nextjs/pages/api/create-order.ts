@@ -6,6 +6,10 @@ import { OrderInputSchema } from '../../validation/orderSchema';
 
 // Basic discount validation: fetch discount doc by code if provided
 async function resolveDiscount(code: string) {
+    if (!sanityClient) {
+        // Return a demo discount for testing purposes
+        return code === 'DEMO10' ? { _id: 'demo-discount', discountType: 'percentage', value: 10, usageLimit: 100, code: 'DEMO10' } : null;
+    }
     const now = new Date().toISOString();
     return sanityClient.fetch(`*[_type == "discount" && code == $code && (!defined(validFrom) || validFrom <= $now) && (!defined(validTo) || validTo >= $now)][0]{_id, discountType, value, usageLimit, code}`, { code, now });
 }
@@ -21,6 +25,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.setHeader('Allow', 'POST');
         return res.status(405).json({ error: 'Method not allowed' });
     }
+
+    // Demo mode - return mock response
+    if (!sanityClient) {
+        return res.status(200).json({
+            success: true,
+            orderId: 'demo-order-' + Date.now(),
+            message: 'Demo order created successfully! In production, this would create a real order in Sanity.'
+        });
+    }
+
     // Rate limit
     const rl = rateLimit(`create-order:${req.socket.remoteAddress}`);
     if (!rl.allowed) return res.status(429).json({ error: 'Rate limit exceeded', retryAfterMs: rl.retryAfter });

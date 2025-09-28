@@ -6,11 +6,12 @@ import { rateLimit, getAuth, verifyCsrf } from '../../utils/apiUtils';
 // Not for production use; resets on server restart.
 const memoryWishlists: Record<string, Set<string>> = {};
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'yourProjectId';
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
-
 const token = process.env.SANITY_API_TOKEN;
-const client = createClient({ projectId, dataset, apiVersion: '2025-09-01', useCdn: false, token });
+const demoMode = process.env.NEXT_PUBLIC_DEMO_MODE === 'true';
+
+const client = (projectId && !demoMode) ? createClient({ projectId, dataset, apiVersion: '2025-09-01', useCdn: false, token }) : null;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -24,8 +25,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!productId) return res.status(400).json({ error: 'Missing productId' });
     const userId = auth.userId;
 
-    // If no token, immediately use memory mode (demo)
-    const useMemory = !token || projectId === 'yourProjectId';
+    // If no client available, use memory mode (demo)
+    const useMemory = !client;
 
     const wishlistId = `wishlist-${userId}`;
     const wishlist = useMemory ? null : await client.fetch(`*[_type=="wishlist" && _id=="${wishlistId}"][0]{_id, items[]{_key, product->{_id}}}`);

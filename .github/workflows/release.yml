@@ -21,8 +21,20 @@ jobs:
         run: npm run build
       - name: Verify
         run: npm run verify
-      - name: Publish
-        # Requires repository secret NPM_TOKEN with publish rights.
-        run: npm publish --access public
+      - name: Publish (if NPM_TOKEN configured)
+        run: |
+          if [ -n "$NODE_AUTH_TOKEN" ]; then
+            echo "Publishing to npm..."
+            npm publish --access public
+          else
+            echo "NPM_TOKEN not configured. Skipping npm publish."
+            echo "This is normal for the first release."
+            echo "To enable automatic npm publishing:"
+            echo "1. Create npm account and generate publish token"
+            echo "2. Go to https://github.com/${{ github.repository }}/settings/secrets/actions"
+            echo "3. Add secret: NPM_TOKEN = your npm publish token"
+            echo "4. Push new tag to trigger release with publish"
+            exit 0
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

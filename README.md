@@ -13,7 +13,7 @@
 2. Go to [vercel.com](https://vercel.com/new)
 3. Import your forked repo
 4. **Set Root Directory to: `example-nextjs`**
-5. Add environment variables (see below)
+5. Add one environment variable: `NEXT_PUBLIC_DEMO_MODE=true`
 6. Deploy!
 
 **Option 2: Direct Vercel Import**

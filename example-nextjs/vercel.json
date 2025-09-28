@@ -6,17 +6,5 @@
       "src": "package.json",
       "use": "@vercel/next"
     }
-  ],
-  "env": {
-    "NEXT_PUBLIC_SANITY_PROJECT_ID": "@sanity_project_id",
-    "NEXT_PUBLIC_SANITY_DATASET": "@sanity_dataset",
-    "NEXT_PUBLIC_DEMO_MODE": "true"
-  },
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_SANITY_PROJECT_ID": "@sanity_project_id",
-      "NEXT_PUBLIC_SANITY_DATASET": "@sanity_dataset", 
-      "NEXT_PUBLIC_DEMO_MODE": "true"
-    }
-  }
+  ]
 }

@@ -17,10 +17,18 @@ This guide helps you deploy the demo Next.js application to showcase your Sanity
    - Click "Continue"
 
 3. **Configure Environment Variables:**
+   
+   **For Demo Mode (Recommended):**
    ```
-   NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
-   NEXT_PUBLIC_SANITY_DATASET=production  
    NEXT_PUBLIC_DEMO_MODE=true
+   ```
+   *(Leave SANITY_PROJECT_ID empty - it will use fallback data)*
+   
+   **For Real Sanity Data:**
+   ```
+   NEXT_PUBLIC_SANITY_PROJECT_ID=your_actual_project_id
+   NEXT_PUBLIC_SANITY_DATASET=production
+   NEXT_PUBLIC_DEMO_MODE=false
    ```
    
 4. **Deploy**

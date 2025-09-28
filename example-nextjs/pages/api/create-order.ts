@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { z } from 'zod';
 import { sanityClient } from '../../utils/sanityClient';
 import { getAuth, requireUserMatch, rateLimit, verifyCsrf } from '../../utils/apiUtils';
-import { OrderInputSchema } from '../../../validation/orderSchema';
+import { OrderInputSchema } from '../../validation/orderSchema';
 
 // Basic discount validation: fetch discount doc by code if provided
 async function resolveDiscount(code: string) {

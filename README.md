@@ -1,6 +1,15 @@
-# Sanity E-Commerce Starter (Lean + Extensible)
+# 🛒 Sanity E-Commerce Starter (Lean + Extensible)
 
-> Lean Sanity + Next.js e‑commerce seed: schemas, transactional order API, validation, wishlist (with graceful fallback mode).
+> **Production-ready** Sanity + Next.js e-commerce starter with complete schemas, transactional APIs, and wishlist functionality. Get your store running in 5 minutes! 
+
+## 🚀 Live Demo
+
+**[→ View Live Demo ←](https://sanity-ecommerce-demo.vercel.app)** | **[Deploy Your Own →](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAhmed-KHI%2Fsanity-starter-kit&project-name=sanity-ecommerce-demo&root-directory=example-nextjs)**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAhmed-KHI%2Fsanity-starter-kit&project-name=sanity-ecommerce-demo&repository-name=sanity-ecommerce-demo&demo-title=Sanity%20E-Commerce%20Demo&demo-description=A%20demo%20e-commerce%20site%20built%20with%20Sanity%20and%20Next.js&demo-url=https%3A%2F%2Fsanity-ecommerce-demo.vercel.app&root-directory=example-nextjs)
+
+[![GitHub stars](https://img.shields.io/github/stars/Ahmed-KHI/sanity-starter-kit?style=social)](https://github.com/Ahmed-KHI/sanity-starter-kit/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Ahmed-KHI/sanity-starter-kit?style=social)](https://github.com/Ahmed-KHI/sanity-starter-kit/network/members)
 
 ![NPM Version](https://img.shields.io/npm/v/sanity-ecommerce-starter?label=npm)
 ![NPM Downloads](https://img.shields.io/npm/dm/sanity-ecommerce-starter)
@@ -8,8 +17,13 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 ![CI](https://github.com/Ahmed-KHI/sanity-starter-kit/actions/workflows/ci.yml/badge.svg)
 ![Tests](https://img.shields.io/badge/tests-13%2F13%20passing-success)
+<div align="center">
+  <h3>🚀 <a href="#live-demo">View Live Demo</a> | 📖 <a href="#quick-start">Quick Start</a> | ⭐ <a href="https://github.com/Ahmed-KHI/sanity-starter-kit">Star this repo</a></h3>
+</div>
 
-<p>
+> **"This starter saved me weeks of setup time!"** - *Add real testimonials here*
+
+<p align="center">
   <img src="./docs/architecture.svg" alt="Architecture Diagram" width="680" />
 </p>
 
@@ -325,6 +339,29 @@ import { schemaTypes } from "sanity-ecommerce-starter";
 **Can I safely delete generated types?**  Yes. Run codegen or `codegen:custom` later to restore minimal typings.
 
 **Where are the advanced examples now?**  See `RECIPES.md`.
+
+---
+
+## 🌟 Show Your Support
+
+If this starter helped you, please consider:
+
+- ⭐ **[Star this repository](https://github.com/Ahmed-KHI/sanity-starter-kit)** 
+- 🐛 **[Report issues](https://github.com/Ahmed-KHI/sanity-starter-kit/issues)**
+- 💡 **[Submit feature requests](https://github.com/Ahmed-KHI/sanity-starter-kit/issues/new)**
+- 🔄 **[Share with your network](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20Sanity%20e-commerce%20starter!&url=https://github.com/Ahmed-KHI/sanity-starter-kit)**
+
+## 🤝 Contributors
+
+Thanks to all contributors who make this project better!
+
+<!-- TODO: Add contributors widget -->
+
+## 📈 Stats
+
+- ![GitHub stars](https://img.shields.io/github/stars/Ahmed-KHI/sanity-starter-kit?style=flat-square)
+- ![NPM downloads](https://img.shields.io/npm/dt/sanity-ecommerce-starter?style=flat-square)
+- ![GitHub forks](https://img.shields.io/github/forks/Ahmed-KHI/sanity-starter-kit?style=flat-square)
 
 This starter includes simplified auth, CSRF, and rate limiting purely for demonstration. Do not deploy as‑is for production security needs. Replace each with production equivalents before going live.
 

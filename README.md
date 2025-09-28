@@ -2,11 +2,11 @@
 
 > Lean Sanity + Next.js e‑commerce seed: schemas, transactional order API, validation, wishlist (with graceful fallback mode).
 
+![NPM Version](https://img.shields.io/npm/v/sanity-ecommerce-starter?label=npm)
+![NPM Downloads](https://img.shields.io/npm/dm/sanity-ecommerce-starter)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue) 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
-![Lean Core](https://img.shields.io/badge/Core%20Size-minimal-success)
 ![CI](https://github.com/Ahmed-KHI/sanity-starter-kit/actions/workflows/ci.yml/badge.svg)
-![Release](https://img.shields.io/github/v/tag/Ahmed-KHI/sanity-starter-kit?label=version)
 ![Tests](https://img.shields.io/badge/tests-13%2F13%20passing-success)
 
 <p>
@@ -24,15 +24,27 @@ Clean Sanity schemas + minimal Next.js demo showing products, cart, wishlist, an
 - Lightweight cart context + product list/detail pages
 - Type generation fallback (works even if official codegen fails)
 
-## 5‑Minute Start
+## Installation
 
-1. Install deps
+### Option 1: NPM Package (Recommended)
 ```bash
-git clone <your-repo-or-fork>
+# Install the starter kit
+npm install sanity-ecommerce-starter
+
+# Or with your preferred package manager
+pnpm add sanity-ecommerce-starter
+yarn add sanity-ecommerce-starter
+```
+
+### Option 2: Clone Repository
+```bash
+git clone https://github.com/Ahmed-KHI/sanity-starter-kit.git
 cd sanity-starter-kit
 npm install
 cd example-nextjs && npm install && cd ..
 ```
+
+## 5‑Minute Start
 
 ### Add Sanity Studio (if not already)
 
@@ -43,6 +55,26 @@ npm create sanity@latest -- --ts
 ```
 
 Place/merge the contents of `schemas/` into your studio's schema folder and export `schemaTypes`.
+
+### Configure Environment Variables
+
+## Usage
+
+### Using the NPM Package
+
+```typescript
+// Import schemas in your Sanity studio
+import { schemaTypes } from 'sanity-ecommerce-starter/schemas'
+
+// Import validation schemas
+import { productValidation } from 'sanity-ecommerce-starter/validation'
+
+// Use in your sanity.config.ts
+export default defineConfig({
+  // ... other config
+  schema: { types: schemaTypes }
+})
+```
 
 ### Configure Environment Variables
 

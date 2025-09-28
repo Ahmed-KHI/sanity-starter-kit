@@ -1,6 +1,6 @@
 {
   "name": "sanity-ecommerce-starter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Sanity e-commerce schema & validation starter kit with demo Next.js frontend.",
   "license": "MIT",
   "workspaces": [

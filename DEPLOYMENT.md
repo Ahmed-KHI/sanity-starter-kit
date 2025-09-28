@@ -7,13 +7,14 @@ This guide helps you deploy the demo Next.js application to showcase your Sanity
 ### One-Click Deploy
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAhmed-KHI%2Fsanity-starter-kit&project-name=sanity-ecommerce-demo&repository-name=sanity-ecommerce-demo&demo-title=Sanity%20E-Commerce%20Demo&demo-description=A%20demo%20e-commerce%20site%20built%20with%20Sanity%20and%20Next.js&demo-url=https%3A%2F%2Fsanity-ecommerce-demo.vercel.app&root-directory=example-nextjs)
 
-### Manual Steps
+### Manual Steps (Recommended)
 1. **Fork this repository**
 2. **Connect to Vercel:**
-   - Go to [vercel.com](https://vercel.com)
-   - Click "New Project"
-   - Import your forked repository
-   - **Important:** Set Root Directory to `example-nextjs`
+   - Go to [vercel.com/new](https://vercel.com/new)
+   - Click "Import Git Repository"
+   - Select your forked repository
+   - **🚨 CRITICAL:** In "Configure Project" → Set **Root Directory** to `example-nextjs`
+   - Click "Continue"
 
 3. **Configure Environment Variables:**
    ```
@@ -21,6 +22,40 @@ This guide helps you deploy the demo Next.js application to showcase your Sanity
    NEXT_PUBLIC_SANITY_DATASET=production  
    NEXT_PUBLIC_DEMO_MODE=true
    ```
+   
+4. **Deploy**
+   - Click "Deploy" 
+   - Wait for build to complete
+   - Your demo will be live!
+
+## 📋 Step-by-Step Visual Guide
+
+### Root Directory Configuration
+When importing to Vercel, you'll see this screen:
+
+```
+┌─────────────────────────────────────────┐
+│ Configure Project                       │
+├─────────────────────────────────────────┤
+│ Framework Preset: Next.js ✓            │
+│ Root Directory: [example-nextjs]  ← SET │
+│ Build Command: npm run build            │
+│ Output Directory: .next                 │
+└─────────────────────────────────────────┘
+```
+
+**🚨 Make sure "Root Directory" shows `example-nextjs`**
+
+### Environment Variables Screen
+```
+┌─────────────────────────────────────────┐
+│ Environment Variables                   │
+├─────────────────────────────────────────┤
+│ NEXT_PUBLIC_DEMO_MODE = true           │
+│ NEXT_PUBLIC_SANITY_PROJECT_ID = (optional) │
+│ NEXT_PUBLIC_SANITY_DATASET = production │
+└─────────────────────────────────────────┘
+```
 
 ## Getting Sanity Credentials
 

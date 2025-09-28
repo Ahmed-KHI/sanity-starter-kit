@@ -4,9 +4,22 @@
 
 ## 🚀 Live Demo
 
-**[→ View Live Demo ←](https://sanity-ecommerce-demo.vercel.app)** | **[Deploy Your Own →](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAhmed-KHI%2Fsanity-starter-kit&project-name=sanity-ecommerce-demo&root-directory=example-nextjs)**
+**[→ View Live Demo ←](https://sanity-ecommerce-demo.vercel.app)**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAhmed-KHI%2Fsanity-starter-kit&project-name=sanity-ecommerce-demo&repository-name=sanity-ecommerce-demo&demo-title=Sanity%20E-Commerce%20Demo&demo-description=A%20demo%20e-commerce%20site%20built%20with%20Sanity%20and%20Next.js&demo-url=https%3A%2F%2Fsanity-ecommerce-demo.vercel.app&root-directory=example-nextjs)
+### 🚀 Deploy Your Own Copy
+
+**Option 1: Manual Deploy (Recommended)**
+1. Fork this repository
+2. Go to [vercel.com](https://vercel.com/new)
+3. Import your forked repo
+4. **Set Root Directory to: `example-nextjs`**
+5. Add environment variables (see below)
+6. Deploy!
+
+**Option 2: Direct Vercel Import**
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Ahmed-KHI/sanity-starter-kit&project-name=sanity-ecommerce-demo)
+
+⚠️ **Important:** After clicking deploy, set **Root Directory** to `example-nextjs` in the import settings!
 
 [![GitHub stars](https://img.shields.io/github/stars/Ahmed-KHI/sanity-starter-kit?style=social)](https://github.com/Ahmed-KHI/sanity-starter-kit/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Ahmed-KHI/sanity-starter-kit?style=social)](https://github.com/Ahmed-KHI/sanity-starter-kit/network/members)

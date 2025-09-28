@@ -1,10 +1,35 @@
 # 🛒 Sanity E-Commerce Starter (Lean + Extensible)
 
-> **Production-ready** Sanity + Next.js e-commerce starter with complete schemas, transactional APIs, and wishlist functionality. Get your store running in 5 minutes! 
+> **Production-ready** Sa></tr>
+</table>
+
+## 📸 Screenshots
+
+<div align="center">
+
+### 🏪 Product Catalog
+*TODO: Add screenshot of product listing page*
+
+### 🛒 Shopping Cart  
+*TODO: Add screenshot of cart functionality*
+
+### ❤️ Wishlist Management
+*TODO: Add screenshot of wishlist feature*
+
+### 🎛️ Sanity Studio
+*TODO: Add screenshot of Sanity CMS interface*
+
+</div>
+
+<div align="center">
+  <h3>🚀 <a href="#live-demo">View Live Demo</a> | 📖 <a href="#installation">Get Started</a> | ⭐ <a href="https://github.com/Ahmed-KHI/sanity-starter-kit/stargazers">Star this repo</a></h3>
+</div>.js e-commerce starter with complete schemas, transactional APIs, and wishlist functionality. Get your store running in 5 minutes! 
 
 ## 🚀 Live Demo
 
-**[→ View Live Demo ←](https://sanity-ecommerce-demo.vercel.app)**
+**[→ View Live Demo ←](https://sanity-starter-kit-example-nextjs.vercel.app/)** *(Update this with your actual Vercel URL)*
+
+> 💡 **Fully functional demo** with products, cart, wishlist, and order processing - no setup required!
 
 ### 🚀 Deploy Your Own Copy
 
@@ -30,6 +55,53 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 ![CI](https://github.com/Ahmed-KHI/sanity-starter-kit/actions/workflows/ci.yml/badge.svg)
 ![Tests](https://img.shields.io/badge/tests-13%2F13%20passing-success)
+
+---
+
+## 🌟 Why Choose This Starter?
+
+<table>
+<tr>
+<td>
+
+**⚡ Production Ready**
+- Complete e-commerce schemas
+- Transactional order processing
+- Inventory management
+- Discount system
+
+</td>
+<td>
+
+**🚀 Developer Experience** 
+- TypeScript + Zod validation
+- 13/13 passing tests
+- CI/CD pipeline included
+- One-click deployment
+
+</td>
+</tr>
+<tr>
+<td>
+
+**🎯 Real-World Features**
+- Shopping cart & wishlist
+- User management
+- Payment status tracking
+- Low stock alerts
+
+</td>
+<td>
+
+**📦 Easy Integration**
+- NPM package available
+- Modular schemas
+- Fallback demo mode
+- Comprehensive docs
+
+</td>
+</tr>
+</table>
 <div align="center">
   <h3>🚀 <a href="#live-demo">View Live Demo</a> | 📖 <a href="#quick-start">Quick Start</a> | ⭐ <a href="https://github.com/Ahmed-KHI/sanity-starter-kit">Star this repo</a></h3>
 </div>

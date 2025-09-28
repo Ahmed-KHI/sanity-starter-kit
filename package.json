@@ -1,0 +1,57 @@
+{
+  "name": "sanity-ecommerce-starter",
+  "version": "0.1.1",
+  "description": "Sanity e-commerce schema & validation starter kit with demo Next.js frontend.",
+  "license": "MIT",
+  "workspaces": [
+    "example-nextjs"
+  ],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.15"
+  },
+  "scripts": {
+    "dev:studio": "node -r dotenv/config node_modules/@sanity/cli/bin/sanity dev",
+    "build:studio": "sanity build",
+    "typecheck": "tsc -p . --noEmit",
+    "lint": "eslint . --ext .ts,.tsx || exit 0",
+    "test": "jest",
+    "build": "tsc -p .",
+    "seed": "node scripts/seed.ts",
+    "codegen": "node scripts/codegen-run.cjs",
+    "prepublishOnly": "npm run codegen",
+    "codegen:custom": "node scripts/custom-codegen.cjs",
+    "debug:env": "node -r dotenv/config -e \"console.log(Object.fromEntries(Object.entries(process.env).filter(([k])=>k.includes('SANITY')||k.includes('NEXT_PUBLIC'))))\"",
+    "verify": "npm run typecheck && npm test"
+  },
+  "peerDependencies": {
+    "sanity": "^3.30.0"
+  },
+  "devDependencies": {
+    "@sanity/codegen": "^3.30.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.0",
+    "dotenv": "^16.4.5",
+    "jest": "^29.7.0",
+    "sanity": "^3.30.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.4.0",
+    "zod": "^3.23.8"
+  },
+  "files": [
+    "dist",
+    "schemas",
+    "validation",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./schemas": "./schemas/index.ts"
+  },
+  "types": "./dist/index.d.ts"
+}

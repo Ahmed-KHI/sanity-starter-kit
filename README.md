@@ -6,8 +6,8 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 ![Lean Core](https://img.shields.io/badge/Core%20Size-minimal-success)
 ![CI](https://github.com/Ahmed-KHI/sanity-starter-kit/actions/workflows/ci.yml/badge.svg)
-![Release](https://img.shields.io/github/v/release/Ahmed-KHI/sanity-starter-kit?label=release)
-![Coverage](https://img.shields.io/badge/coverage-pending-lightgrey)
+![Release](https://img.shields.io/github/v/tag/Ahmed-KHI/sanity-starter-kit?label=version)
+![Tests](https://img.shields.io/badge/tests-13%2F13%20passing-success)
 
 <p>
   <img src="./docs/architecture.svg" alt="Architecture Diagram" width="680" />
